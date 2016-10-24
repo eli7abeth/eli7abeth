@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<style type="text/css">
+    nav { position: fixed; z-index: 1030; }
+    section { width: 3600px; top: 100px; position: relative; overflow: auto; }
+    .item{ float: left; position: relative; width: 900px; height: 500px; font-size: 200px; }
+    .item1 { background: #f00; }
+    .item2 { background: #0f0; }
+    .item3 { background: #00f; }
+</style>
+<body>
+<header>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script>
+function horizontalNavigation(position, event) {
+	 debug;
+	console.log('position = ', position);
+   $('sectionl').scrollLeft(position);
+    event.preventDefault();
+}
+$('.nav-item1').click(function (event) {
+    horizontalNavigation(0, event);
+});
+$('.nav-item2').click(function (event) {
+    horizontalNavigation(900, event);
+});
+$('.nav-item3').click(function (event) {
+    horizontalNavigation(1800, event);
+});
+</script>
+
+ <nav>
+        <ul>
+            <li><a class="nav-item1" href="#">Item 1a</li>
+            <li><a class="nav-item2" href="#">Item 2a</li>
+            <li><a class="nav-item3" href="#">Item 3a</li>
+        </ul>
+    </nav>
+</header>
+<section>
+    <div class="item item1">Item 1</div>
+    <div class="item item2">Item 2</div>
+    <div class="item item3">Item 3</div>
+</section>
+</body>
+</html>
